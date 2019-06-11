@@ -1,0 +1,23 @@
+@namespace("org.simoexpo.kprice.example.kafka.models")
+protocol OrderProtocol {
+
+  enum ProductItem {
+    SamsungS10, IPhoneXS, IPhoneXR, OnePlus7, Pixel3, HuaweiP30
+  }
+
+  record Order {
+    long id;
+    long userId;
+    string email;
+    ProductItem product;
+    int quantity;
+  }
+
+  record OrderRequest {
+    long id;
+    long userId;
+    ProductItem product;
+    int quantity;
+  }
+
+}

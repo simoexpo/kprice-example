@@ -1,0 +1,20 @@
+@namespace("org.simoexpo.kprice.example.kafka.models")
+protocol UserProtocol {
+
+  enum UserStatus {
+    Draft, Valid, Invalid
+  }
+
+  record User {
+    long id;
+    string userName;
+    string email;
+    UserStatus status;
+  }
+
+  record Verification {
+    long userId;
+    UserStatus userStatus;
+  }
+
+}
